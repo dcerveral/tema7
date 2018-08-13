@@ -1,0 +1,69 @@
+
+	.bold{font-weight:bold;}
+
+.redondo{-webkit-border-radius: 30px;
+-moz-border-radius: 30px;
+border-radius: 30px;width:60px; height: 60px; padding:13px;border: 2px solid #454242; color:#454242; font-size:1.5em}
+	
+	
+
+.block-with-text {
+   margin-right:5px;
+  width: 100% ; 
+  overflow: hidden;
+  
+  position: relative; 
+  font-size: 1em;
+  line-height: 1.3em;
+  /* max-height = line-height (1.1) * lines max number (3) */
+  max-height: 5.2em; 
+  
+  margin-right: -1em;
+  padding-right: 1em;
+  -ms-hyphens: auto;
+	-moz-hyphens: auto;
+	-webkit-hyphens: auto;
+	hyphens: auto;
+}
+/* create the ... */
+.block-with-text:before {
+  /* points in the end */
+  content: '...';
+  /* absolute position */
+  position: absolute;
+  /* set position to right bottom corner of block */
+  right: 3px;
+  bottom: 0;
+}
+/* hide ... if we have text, which is less than or equal to max lines */
+.block-with-text:after {
+  /* points in the end */
+  content: '';
+  /* absolute position */
+  position: absolute;
+  /* set position to right bottom corner of text */
+  right: 0;
+  /* set width and height */
+   width: 1em;
+  height: 1em;
+ // margin-top: 0.2em;
+  /* bg color = bg color under block */
+  background: white;
+     
+}
+
+.font2em {font-size: 2em;}
+.font3em {font-size: 3em;}
+
+
+@media (max-width: 450px) and  (min-width: 0px) {
+	.font2em {font-size: 1.5em;}
+	.font3em {font-size: 2em;}
+	 
+
+}
+
+@media (max-width: 1000px) and  (min-width: 450px) {
+	.font2em {font-size: 1.6em;}
+	.font3em {font-size: 2.5em;}
+}
